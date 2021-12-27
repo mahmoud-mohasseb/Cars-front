@@ -1,0 +1,37 @@
+.Navbar {
+  @apply justify-end
+    m-10
+    xxxs:hidden
+    xxs:hidden
+    xs:hidden
+    sm:hidden
+    md:hidden
+    w-full
+    flex-grow
+    lg:flex
+    lg:items-center
+    lg:w-auto
+    sm:w-auto
+    text-sm;
+}
+/* tabbar */
+.tabbar {
+  @apply flex
+   md:hidden 
+  flex-row
+   items-center 
+   justify-around
+   /* px-8  */
+    h-20
+    bg-current
+   /* visible */
+   md:invisible
+   fixed
+   bottom-0 
+   w-full
+   rounded-t-3xl
+   text-2xl;
+}
+/* .icon {
+  @apply justify-center mr-20;
+} */

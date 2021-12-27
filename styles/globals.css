@@ -1,3 +1,576 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* h1 {
+    @apply text-2xl;
+  } */
+  h2 {
+    @apply text-xl;
+  }
+  /* h4 {
+    @apply text-black
+    text-lg
+    font-semibold
+    mt-4;
+  } */
+  p {
+    @apply w-10/12
+    z-[1] 
+    text-xs
+    md:text-sm
+    text-center
+    text-gray-600;
+  }
+  button {
+    @apply pl-5
+    pr-5
+    pt-3
+    pb-3
+    outline-none
+    rounded-md
+    /* text-white */
+    text-xs
+    font-sans
+    border-transparent
+    border-2
+    border-solid
+    focus:outline-none
+    transition-all
+    duration-200
+    ease-in-out
+    m-1;
+  }
+
+  ul {
+    @apply outline-none
+    list-none
+    flex
+    flex-col;
+  }
+  li {
+    @apply mb-3
+    text-gray-400;
+  }
+  h3 {
+    @apply text-2xl
+    font-bold
+    text-white
+    mb-3;
+  }
+  h6 {
+    @apply text-sm
+    /* text-white; */;
+  }
+}
+
+@layer components {
+  .btn-blue {
+    @apply bg-red-500 hover:bg-red-300 text-white font-bold py-2 px-4 rounded;
+  }
+  .Image-borderRadius {
+    @apply rounded-lg;
+  }
+  /* .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    margin: theme('spacing.2');
+    box-shadow: theme('boxShadow.xl');
+  } */
+  .DateCalendar {
+    @apply text-red-400 
+    absolute
+    max-w-none
+    w-auto 
+    top-14
+    left-0 
+    right-0 
+    rounded-md
+    select-none;
+  }
+  .font {
+    @apply font-bold;
+  }
+  /* top section */
+  .topcontainer {
+    /* min-height: 400px;
+    margin-top: 6em; */
+    @apply min-h-min
+    shadow
+     w-full
+    max-w-screen-2xl
+    flex
+    justify-between
+    pl-3
+    pr-3
+    lg:pl-12
+    lg:pr-12;
+  }
+  .slogan {
+    @apply font-bold
+    text-2xl
+    xl:text-6xl
+    sm:text-3xl
+    md:text-5xl
+    lg:font-black
+    md:font-extrabold
+    text-black
+    mb-4
+    sm:leading-snug
+    lg:leading-normal
+    xl:leading-relaxed;
+  }
+  .description {
+    @apply text-xs
+    lg:text-sm
+    xl:text-lg
+    sm:max-h-full
+    overflow-hidden
+    max-h-12
+    text-gray-800;
+  }
+
+  .BlobContainer {
+    @apply w-80 h-80 -top-24 -right-20 absolute z-[-1] rotate-45;
+    Image {
+      @apply w-full
+      h-10
+      max-h-max;
+    }
+  }
+  .Mclaren {
+    @apply w-auto
+    h-10;
+    right-24 top-24 absolute Image {
+      @apply w-full
+      h-auto
+      max-h-max;
+    }
+  }
+  .LeftContainer {
+    @apply w-1/2
+    flex
+    flex-col;
+  }
+  .RightContainer {
+    @apply w-1/2
+    flex
+    flex-col
+    relative
+    mt-20;
+  }
+  .ButtonsContainer {
+    @apply flex
+    flex-wrap
+    mt-4;
+  }
+  .Basebutton {
+    @apply pl-5
+    
+    pr-5
+    pt-3
+    pb-3
+    outline-none
+    rounded-md
+    /* text-white */
+    text-xs
+    font-semibold
+    border-transparent
+    border-2
+    border-solid
+    focus:outline-none
+    transition-all
+    duration-200
+    ease-in-out
+    m-1;
+  }
+  .FilledButton {
+    @apply border-red-500
+    text-red-500
+    bg-transparent
+    hover:bg-red-500
+    hover:text-white
+    hover:border-transparent;
+  }
+  .OutlinedButton {
+    @apply bg-red-500
+    text-white
+    hover:bg-transparent
+    hover:text-red-500
+    hover:border-red-500;
+  }
+  /* calender container */
+  .CardContainer {
+    min-height: 4.3em;
+    box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);
+    @apply flex
+    justify-center
+    items-center
+    rounded-md
+    bg-white
+    pt-1
+    pb-1
+    pr-2
+    pl-2
+    md:pt-2
+    md:pb-2
+    md:pl-9
+    md:pr-9
+    relative;
+  }
+  .ItemContainer {
+    @apply flex;
+  }
+  .Icon {
+    @apply text-red-500
+    fill-current
+    text-xs
+    md:text-base
+    mr-1
+    md:mr-3;
+  }
+  .Name {
+    @apply text-gray-600
+    text-xs
+    md:text-sm
+    cursor-pointer
+    select-none;
+  }
+  .SmallIcon {
+    @apply text-gray-500
+    fill-current
+    text-xs
+    md:text-base
+    ml-1;
+  }
+  .LineSeperator {
+    /* width: 2px;
+    height: 45%; */
+    @apply bg-gray-300 mr-2
+    h-10
+    w-0.5
+    ml-2
+    md:mr-5
+    md:ml-5;
+  }
+  .Container {
+    @apply w-full
+    flex
+    flex-col
+    items-center
+    pt-3
+    pb-3
+    lg:pt-6
+    lg:pb-6;
+  }
+  .StepsContainer {
+    @apply flex
+    justify-evenly
+    flex-wrap
+    md:flex-row
+    sm:flex-row
+    mt-7
+    lg:mt-16;
+  }
+  .StepTitle {
+    @apply text-lg
+    font-semibold
+    mt-4;
+  }
+  .StepDescription {
+    @apply w-10/12
+    text-xs
+    md:text-sm
+    text-center
+    text-gray-600;
+  }
+  /* @apply text-black */
+  .StepContainer {
+    @apply flex
+    flex-col
+    md:w-96
+    items-center
+    transition-colors
+    hover:text-red-500
+    m-3;
+  }
+  .Step {
+    box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);
+    @apply flex
+    rounded-lg
+    items-center
+    justify-center
+    p-6;
+  }
+  .StepIcon {
+    @apply text-red-500
+    text-3xl;
+  }
+  .PageContainer {
+    @apply flex
+    bottom-0
+    flex-col
+    w-full
+    h-full
+    items-center
+    overflow-x-hidden;
+  }
+  /* About us  */
+  .AboutUsContainer {
+    @apply w-full
+    flex
+    flex-wrap  
+    md:flex-row
+    sm:flex-row
+    lg:flex-row
+    items-center
+    justify-center
+    pt-4
+    pb-4
+    pr-7
+    pl-7
+    md:pl-0
+    md:pr-0;
+  }
+
+  .CarContainerAboutyou {
+    width: auto;
+    height: 15em;
+    margin-left: -50px;
+    image {
+      width: auto;
+      height: 100%;
+    }
+  }
+  /* @media (min-width: ${SCREENS.md}) {
+      height: 28em;
+    }
+    @media (min-width: ${SCREENS.lg}) {
+      height: 30em;
+    }
+    @media (min-width: ${SCREENS['2xl']}) {
+      height: 35em;
+      margin-left: 0;
+    } */
+}
+.InfoContainer {
+  @apply md:w-1/2
+      flex
+      flex-col
+      md:ml-6
+      2xl:ml-16
+      md:mt-40
+      sm:mt-40
+      xs:mt-40
+      xxs:mt-40;
+}
+.Title {
+  @apply text-black
+      text-2xl
+      md:text-5xl
+      font-extrabold
+      md:font-black
+      md:leading-normal;
+}
+.InfoText {
+  @apply md:max-w-2xl
+      text-sm
+      md:text-base
+      text-gray-500
+      font-normal
+      mt-4;
+}
+/* footer */
+.FooterContainer {
+  min-height: 24em;
+  background-color: #1d2124;
+  @apply flex
+    flex-col
+    min-w-full
+    pt-10
+    md:pt-16
+    items-center
+    justify-center;
+}
+.InnerContainer {
+  @apply flex
+    w-full
+    h-full
+    max-w-screen-2xl
+    flex-wrap;
+}
+.BottomContainer {
+  @apply w-full
+    flex
+    max-w-screen-2xl
+    justify-center
+    md:justify-start
+    mt-7
+    md:mt-1;
+}
+.AboutContainer {
+  @apply flex
+    flex-col
+    mr-2
+    md:mr-16
+    pl-10
+    pr-10
+    md:pl-3
+    md:pr-3;
+}
+.SectionContainer {
+  @apply w-full
+    md:w-auto
+    flex
+    flex-col
+    mr-2
+    md:mr-16
+    pl-10
+    pr-10
+    md:pl-3
+    md:pr-3
+    mt-7
+    md:mt-0;
+}
+.RedIcon {
+  @apply w-9
+    h-9
+    rounded-full
+    bg-red-500
+    flex
+    items-center
+    justify-center
+    text-white
+    text-base
+    mr-2;
+}
+.HorizontalContainer {
+  @apply flex
+    text-gray-500
+    items-center;
+}
+.LogoContainer {
+  @apply flex
+  items-center;
+}
+.Image {
+  @apply w-auto
+     h-6 md:h-9;
+  /* img {
+    width: auto;
+    height: 100%;
+  } */
+}
+.LogoTextwhite {
+  @apply text-xl
+    md:text-2xl
+    font-bold
+    text-black
+    m-1;
+}
+.LogoTextdark {
+  @apply text-xl
+    md:text-2xl
+    font-bold
+    text-white
+    m-1;
+}
+.CarContainer {
+  width: 16.5em;
+  min-height: 23em;
+  max-height: 30em;
+  box-shadow: 0 1.3px 17px -2px rgba(0, 0, 0, 0.4);
+  @apply flex
+      flex-col
+      items-center
+      p-3
+      pb-4
+      bg-white
+      rounded-md
+      m-1
+      sm:m-3
+      md:m-6;
+}
+.CarThumbnail {
+  width: 100%;
+  height: auto;
+  /* img {
+    width: 100%;
+    height: 100%;
+  } */
+}
+.CarName {
+  @apply text-base
+       font-bold
+       text-black
+       mt-1
+       mb-1;
+}
+.PricesContainer {
+  @apply w-full
+            flex
+            justify-start
+            mt-3;
+}
+.SmallText {
+  color: inherit;
+  @apply inline-flex
+             text-xs
+             font-thin;
+}
+.DailyPrice {
+  @apply text-red-500
+            font-bold
+            text-sm
+            mr-3;
+}
+.MonthlyPrice {
+  @apply text-gray-500
+            font-bold
+            text-sm;
+}
+.SmallIcon {
+  @apply text-gray-400
+            text-sm
+            mr-1;
+}
+.CarDetailsContainer {
+  @apply flex
+            w-full
+            justify-between;
+}
+.CarDetail {
+  @apply flex
+           items-center;
+}
+.CarInfo {
+  @apply text-gray-400
+            text-xs;
+}
+.Seperator {
+  min-width: 100%;
+  min-height: 1px;
+  @apply flex
+            bg-gray-300
+            mt-2
+            mb-2;
+}
+.RentButton {
+  @apply min-w-full
+          mt-5;
+}
+
+@layer utilities {
+  .filter-none {
+    filter: none;
+  }
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+}
+
 html,
 body {
   padding: 0;
