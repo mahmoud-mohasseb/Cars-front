@@ -40,8 +40,7 @@ const Cardslider = () => {
     {
       name: 'Audi S3 Car',
       mileage: '10k',
-      thumbnailSrc:
-        'https://cdn.jdpower.com/Models/640x480/2017-Audi-S3-PremiumPlus.jpg',
+      thumbnailSrc: '/jeep.png',
       dailyPrice: 70,
       monthlyPrice: 1600,
       gearType: 'Auto',
@@ -50,8 +49,7 @@ const Cardslider = () => {
     {
       name: 'HONDA cITY 5 Seater Car',
       mileage: '20k',
-      thumbnailSrc:
-        'https://shinewiki.com/wp-content/uploads/2019/11/honda-city.jpg',
+      thumbnailSrc: '/mclaren-orange.png',
       dailyPrice: 50,
       monthlyPrice: 1500,
       gearType: 'Auto',

@@ -4,10 +4,7 @@ module.exports = {
   // reactStrictMode: true,
   images: {
     // loader: 'imgix',
-    domains: [
-      'https://cdn.vox-cdn.com/thumbor',
-      'https://s1.cdn.autoevolution.com/images',
-    ],
+    domains: ['https:/cdn.jdpower.com'],
     formats: ['image/avif', 'image/webp'],
   },
 };

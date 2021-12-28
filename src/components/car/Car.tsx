@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 //   import { ICar } from "../../../typings/car";
 import Button from '../Button/Button';
-
+import Image from 'next/image';
 // extends ICar
 interface ICarProps {
   name: string;
@@ -33,7 +33,7 @@ const Car = (props: ICarProps) => {
   return (
     <div className='CarContainer'>
       <div className='CarThumbnail'>
-        <img src={thumbnailSrc} alt='rent car' />
+        <Image src={thumbnailSrc} alt='rent car' width={250} height={150} />
       </div>
       <h3 className='CarName'>{name}</h3>
       <div className='PricesContainer'>
