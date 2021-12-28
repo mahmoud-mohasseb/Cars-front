@@ -33,7 +33,7 @@ const Car = (props: ICarProps) => {
   return (
     <div className='CarContainer'>
       <div className='CarThumbnail'>
-        <img src={thumbnailSrc} alt='rent car' layout='fill' />
+        <img src={thumbnailSrc} alt='rent car' />
       </div>
       <h3 className='CarName'>{name}</h3>
       <div className='PricesContainer'>

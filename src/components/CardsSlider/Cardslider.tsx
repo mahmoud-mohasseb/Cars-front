@@ -6,6 +6,16 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Car from '../car/Car';
 
+interface ICar {
+  thumbnailSrc: string;
+  name: string;
+  mileage: string;
+  gearType: string;
+  dailyPrice: number;
+  monthlyPrice: number;
+  gas: string;
+}
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -26,17 +36,40 @@ const responsive = {
   },
 };
 const Cardslider = () => {
-  const { loading, error, data } = useQuery(GET_CARS);
-  if (loading) return null;
-  if (error) return `Error! ${error}`;
+  const TestCar = [
+    {
+      name: 'Audi S3 Car',
+      mileage: '10k',
+      thumbnailSrc:
+        'https://cdn.jdpower.com/Models/640x480/2017-Audi-S3-PremiumPlus.jpg',
+      dailyPrice: 70,
+      monthlyPrice: 1600,
+      gearType: 'Auto',
+      gas: 'Petrol',
+    },
+    {
+      name: 'HONDA cITY 5 Seater Car',
+      mileage: '20k',
+      thumbnailSrc:
+        'https://shinewiki.com/wp-content/uploads/2019/11/honda-city.jpg',
+      dailyPrice: 50,
+      monthlyPrice: 1500,
+      gearType: 'Auto',
+      gas: 'Petrol',
+    },
+  ];
+
+  // const { loading, error, data } = useQuery(GET_CARS);
+  // if (loading) return null;
+  // if (error) return `Error! ${error}`;
   return (
     <div>
       <Carousel responsive={responsive} swipeable={true} draggable={false}>
-        {data.cars.map((car: any, index: any) => (
+        {TestCar.map((car: any, index: any) => (
           <Car
             key={index}
             name={car.name}
-            thumbnailSrc={car.thumbnailUrl}
+            thumbnailSrc={car.thumbnailSrc}
             dailyPrice={car.dailyPrice}
             monthlyPrice={car.monthlyPrice}
             mileage={car.mileage}
